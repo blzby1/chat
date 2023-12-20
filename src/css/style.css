@@ -1,7 +1,7 @@
 div.chat {
     background-color: white;
-    height: 450px;
-    width: 800px;
+    height: 45vw;
+    width: 80vw;
     border-radius: 10px;
 }
 
@@ -85,7 +85,6 @@ div.channelList {
     flex-direction: column;
     gap: 0.5em;
     margin: 0;
-    background-color: red;
 }
 
 h3.heading {
@@ -106,4 +105,83 @@ ul.channels li:hover {
 h2.onlineHeader {
     margin: 1%;
     font-size: 140%;
+}
+
+div.online ul {
+    list-style-type: none;
+}
+
+
+/* beginning of main box stuff */
+
+
+div.main {
+    display: flex;
+    flex-direction: column;
+
+    /* calculate the space not occupied by the top and side bars */    
+    width: calc(100% - (25% + 3px));
+    height: calc(100% - (10% + 1em + 3px));
+}
+
+div.history {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    overflow: auto;
+    height: 87%;   
+    width: 100%;
+    border-bottom: solid;
+}
+
+div.chatbar {
+    height: 13%;
+    width: 100%;
+}
+
+#form { 
+    background: rgba(0, 0, 0, 0.15); 
+    padding: 0.25rem; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    display: flex; 
+    height: 100%; 
+    box-sizing: border-box;
+}
+
+#input { 
+    border: none;
+    padding: 0 1rem;
+    flex-grow: 0.95;
+    border-radius: 2rem;
+    margin: 0.25rem;
+    font-size: 100%;
+}
+      
+#input:focus { 
+    outline: none; 
+}
+
+#form > button {
+    background: #333;
+    border: none;
+    padding: 0 1rem;
+    margin: 0.25rem; 
+    border-radius: 3px;
+    outline: none;
+    color: #fff;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+#messages > li {
+    padding: 0.5rem 1rem;
+    background-color: aqua;
+    color: black;
 }

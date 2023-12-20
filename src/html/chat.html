@@ -1,3 +1,5 @@
+<script src="/socket.io.js"></script>
+
 <div class="chat">
     <div class="topbar">
         <button class="servers">
@@ -38,7 +40,17 @@
         </div>
     </div>
     <div class="main">
-        <div class="chatbar"></div>
-        <div class="history"></div>
+        <div class="history" id="history">
+            <ul id="messages">
+
+            </ul>
+        </div>
+        <div class="chatbar">
+            <form action="" id="form">
+                <input id="input" autocomplete="off" placeholder="send a message..."/><button>Send</button>
+            </form>
+        </div>
     </div>
 </div>
+
+<script src="/hyperchat.js"></script>
