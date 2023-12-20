@@ -1,7 +1,7 @@
 div.chat {
     background-color: white;
-    height: 650px;
-    width: 1000px;
+    height: 450px;
+    width: 800px;
     border-radius: 10px;
 }
 
@@ -16,6 +16,10 @@ div.topbar {
     gap: 1em;
     padding: 0.5em;
     margin-right: 0;
+}
+
+h2, li, p, h3, a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 button.servers, button.account, button.settings {
@@ -57,22 +61,49 @@ img.currentLogo, img.currentAccount, img.settingsLogo {
 div.sidebar {
     display: flex;
     flex-direction: column;
-    gap: 1em;
     border-right: solid;
     width: 25%;
 
     /* calcuate the total space occupied by the chat's container minus the height of the topbar (10% height plus 1em total of padding plus a 3-pixel border) */
     height: calc(100% - (10% + 1em + 3px));
+
+    gap: 1rem;
     float: left;
-    text-indent: 0;
     background-color: grey;
+    overflow: auto;
+    border-bottom-left-radius: 10px;
 }
 
-div.channels ul {
+ul.channels {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-div.channels ul li {
-    margin-left: 0;
+div.channelList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin: 0;
+    background-color: red;
+}
 
+h3.heading {
+    margin: 1%;
+    font-size: 120%;
+}
+
+ul.channels li {
+    padding: 5%;
+    border-radius: 5em;
+}
+
+ul.channels li:hover {
+    background-color: wheat;
+    cursor: pointer;
+}
+
+h2.onlineHeader {
+    margin: 1%;
+    font-size: 140%;
 }
