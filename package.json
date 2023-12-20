@@ -1,0 +1,28 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "a chatty chat",
+  "main": "demoserver.js",
+  "scripts": {
+    "test": "echo \"hi\"",
+    "start": "node demoserver.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blzby1/chat.git"
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "blzby1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blzby1/chat/issues"
+  },
+  "homepage": "https://github.com/blzby1/chat#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}

@@ -1,0 +1,78 @@
+div.chat {
+    background-color: white;
+    height: 650px;
+    width: 1000px;
+    border-radius: 10px;
+}
+
+div.topbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: calc(100% - 0.5em);
+    justify-content: flex-end;
+    border-bottom: solid;
+    height: 10%;
+    gap: 1em;
+    padding: 0.5em;
+    margin-right: 0;
+}
+
+button.servers, button.account, button.settings {
+    border: none;
+    display: flex;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    gap: 1em;
+    width: fit-content;
+    height: 100%;
+}
+
+button.servers:hover, button.account:hover, button.settings:hover {
+    background-color: grey;
+}
+
+button.servers {
+    margin-right: auto;
+}
+
+button.settings {
+    margin-left: 0;
+}
+
+h2.serverTitle {
+    font-size: 140%;
+}
+
+img.currentLogo, img.currentAccount, img.settingsLogo {
+    height: 100%;
+    display: block;
+}
+
+
+/* sidebar stuff! */
+
+
+div.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-right: solid;
+    width: 25%;
+
+    /* calcuate the total space occupied by the chat's container minus the height of the topbar (10% height plus 1em total of padding plus a 3-pixel border) */
+    height: calc(100% - (10% + 1em + 3px));
+    float: left;
+    text-indent: 0;
+    background-color: grey;
+}
+
+div.channels ul {
+    list-style: none;
+}
+
+div.channels ul li {
+    margin-left: 0;
+
+}
