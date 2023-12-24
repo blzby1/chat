@@ -1,7 +1,7 @@
 div.chat {
     background-color: white;
-    height: 45vw;
-    width: 80vw;
+    height: 800px;
+    width: 1500px;
     border-radius: 10px;
 }
 
@@ -31,6 +31,7 @@ button.servers, button.account, button.settings {
     gap: 1em;
     width: fit-content;
     height: 100%;
+    align-items: center;
 }
 
 button.servers:hover, button.account:hover, button.settings:hover {
@@ -124,14 +125,15 @@ div.main {
     height: calc(100% - (10% + 1em + 3px));
 }
 
-div.history {
+div#history {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    overflow: auto;
-    height: 87%;   
+    height: 87%;
     width: 100%;
     border-bottom: solid;
+    overflow: auto;
+    background-color: red;
 }
 
 div.chatbar {
@@ -173,15 +175,21 @@ div.chatbar {
     color: #fff;
 }
 
-#messages {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
+p.sentMessage, p.senderMessage {
+    padding: 0.5rem 1rem;
+    max-width: 70%;
+    color: black;
+    width: fit-content;
+    height: fit-content;
+    word-break: break-all;
 }
 
-#messages > li {
-    padding: 0.5rem 1rem;
-    background-color: aqua;
-    color: black;
+p.senderMessage {
+    background-color: lightblue;
+    text-align: right;
+}
+
+p.sentMessage {
+    background-color: lightgray;
+    text-align: left;
 }

@@ -35,6 +35,7 @@ app.route('/socket.io.js').get((req, res) => {
 
 io.on('connection', (socket) => {
   socket.on('chat message', (msg) => {
+    console.log(msg.toString())
     io.emit('chat message', msg);
   });
 });
