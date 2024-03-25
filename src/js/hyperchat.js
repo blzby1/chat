@@ -2,7 +2,7 @@ const socket = io();
 
 var form = document.getElementById('form');
 var input = document.getElementById('input');
-var chatHistory = document.getElementById('history');
+var chatHistory = document.getElementById('chatList');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -13,9 +13,9 @@ form.addEventListener('submit', function(e) {
 });
 
 socket.on('chat message', function(msg) {
-    var item = document.createElement('p');
+    var item = document.createElement('li');
     item.textContent = msg;
-    item.className = "sentMessage"
+    item.className = "incomingMessage"
     chatHistory.appendChild(item);
     chatHistory.scrollTo(0, chatHistory.scrollHeight);
 });

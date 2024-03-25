@@ -1,3 +1,5 @@
+const PORT = 8080
+
 import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
@@ -40,4 +42,6 @@ io.on('connection', (socket) => {
   });
 });
 
-httpServer.listen(8080);
+httpServer.listen(PORT, function(req, res) {
+  console.log("Server running on port " + PORT)
+});
